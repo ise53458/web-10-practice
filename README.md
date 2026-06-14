@@ -78,11 +78,11 @@ web-10-practice/
       services/
         api.js         ← service layer (show this in Demo 4)
       demos/
-        Demo1_UseState.jsx
-        Demo2_UseEffect.jsx
-        Demo3_UseContext.jsx
-        Demo4_ServiceLayer.jsx
-        Demo5_ThreeState.jsx
+        UseStateDemo.jsx
+        UseEffectDemo.jsx
+        UseContextDemo.jsx
+        ServiceLayerDemo.jsx
+        ThreeStateDemo.jsx
       App.jsx          nav bar + demo switcher
       main.jsx
       index.css
