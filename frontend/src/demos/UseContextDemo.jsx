@@ -22,7 +22,7 @@ const ThemeContext = createContext('light');
 // -- 2. Consumers -- these components never receive theme as a prop -----------
 
 function ThemedBox() {
-  const theme = useContext(ThemeContext);   // ??? reads from context directly
+  const theme = useContext(ThemeContext);   // reads from context directly
 
   return (
     <div className={`themed-box ${theme}`}>
@@ -51,7 +51,7 @@ function Toolbar() {
 
 // -- 3. Provider lives at the top -- owns the state --------------------------
 
-export default function Demo3_UseContext() {
+export default function UseContextDemo() {
   const [theme, setTheme] = useState('light');
 
   const toggle = () => setTheme(t => t === 'light' ? 'dark' : 'light');
@@ -68,7 +68,7 @@ export default function Demo3_UseContext() {
       <ThemeContext.Provider value={theme}>
         <div className="card">
           <p style={{ color: 'var(--muted)', fontSize: '0.85rem', marginBottom: '0.75rem' }}>
-            &lt;Demo3_UseContext&gt; -- owns state, provides context
+            &lt;UseContext Demo&gt; -- owns state, provides context
           </p>
           <div style={{ marginBottom: '1rem' }}>
             <button onClick={toggle}>
@@ -83,8 +83,8 @@ export default function Demo3_UseContext() {
       <div className="card">
         <p style={{ fontFamily: 'monospace', fontSize: '0.85rem', lineHeight: 1.9, color: 'var(--muted)' }}>
           <span style={{ color: '#53c0f0' }}>App</span>  (owns: theme state, provides context)<br />
-          &nbsp;???-- <span style={{ color: 'var(--text)' }}>Toolbar</span>  <span style={{ color: '#e94560' }}>??? no theme prop here</span><br />
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;???-- <span style={{ color: '#4caf7d' }}>ThemedBox</span>  <span style={{ color: '#4caf7d' }}>??? reads context directly</span>
+          &nbsp;+-- <span style={{ color: 'var(--text)' }}>Toolbar</span>  <span style={{ color: '#e94560' }}>??? no theme prop here</span><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-- <span style={{ color: '#4caf7d' }}>ThemedBox</span>  <span style={{ color: '#4caf7d' }}>??? reads context directly</span>
         </p>
       </div>
     </div>

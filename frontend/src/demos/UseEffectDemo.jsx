@@ -19,7 +19,7 @@ import { useState, useEffect } from 'react';
 // Public API -- no backend needed for this demo
 const API = 'https://jsonplaceholder.typicode.com/users';
 
-export default function Demo2_UseEffect() {
+export default function UseEffectDemo() {
   const [userId, setUserId]   = useState(1);
   const [user, setUser]       = useState(null);
   const [loading, setLoading] = useState(true);
