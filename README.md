@@ -55,8 +55,6 @@ Navigate between demos using the top nav bar.
 **Requires backend running.**
 **File:** `src/demos/ServiceLayerDemo.jsx`, `src/services/api.js`
 
-**Key point to make:** the component (`Demo4_ServiceLayer.jsx`) never mentions
-a URL, a fetch, or HTTP. It just calls `api.getPosts()`.
 
 ---
 
