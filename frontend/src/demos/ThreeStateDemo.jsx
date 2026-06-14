@@ -70,7 +70,7 @@ export default function ThreeStateDemo() {
               fontWeight: s.active ? 700 : 400,
               transition: 'background 0.3s',
             }}>
-              {s.active ? '??? ' : ''}{s.label}
+              {s.active ? '---' : ''}{s.label}
             </div>
           ))}
         </div>
@@ -79,7 +79,7 @@ export default function ThreeStateDemo() {
       {/* Loading */}
       {loading && (
         <div className="card">
-          <p className="status-loading">Loading posts???</p>
+          <p className="status-loading">Loading posts...</p>
           {/* Skeleton placeholders */}
           <div style={{ marginTop: '0.75rem' }}>
             {[80, 60, 70].map((w, i) => (
@@ -93,7 +93,7 @@ export default function ThreeStateDemo() {
       {error && (
         <div className="card">
           <p className="status-error" style={{ marginBottom: '0.75rem' }}>
-            ??? {error}
+             {error}
           </p>
           <button onClick={load}>Retry</button>
         </div>
