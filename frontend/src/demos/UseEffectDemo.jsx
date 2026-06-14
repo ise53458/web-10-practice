@@ -50,9 +50,9 @@ export default function Demo2_UseEffect() {
         }
       });
 
-    return () => { cancelled = true; };  // ??? cleanup runs before next effect
+    return () => { cancelled = true; };  //  cleanup runs before next effect
 
-  }, [userId]);              // ??? re-run whenever userId changes
+  }, [userId]);              //  re-run whenever userId changes
 
   // -- Render ----------------------------------------------------
   return (
@@ -83,7 +83,7 @@ export default function Demo2_UseEffect() {
 
       {/* Result */}
       <div className="card">
-        {loading && <p className="status-loading">Loading user {userId}???</p>}
+        {loading && <p className="status-loading">Loading user {userId}</p>}
         {error   && <p className="status-error">Error: {error}</p>}
         {!loading && !error && user && (
           <div>
@@ -102,7 +102,7 @@ export default function Demo2_UseEffect() {
           &nbsp;&nbsp;let cancelled = false;<br />
           &nbsp;&nbsp;fetch(`/users/<span style={{ color: '#53c0f0' }}>$&#123;userId&#125;</span>`).then(...)<br />
           &nbsp;&nbsp;return () =&gt; {'{ cancelled = true; }'}  <span style={{ color: '#8899aa' }}>// cleanup</span><br />
-          {'}'}, [<span style={{ color: '#e94560' }}>userId</span>]);  <span style={{ color: '#8899aa' }}>// ??? dependency</span>
+          {'}'}, [<span style={{ color: '#e94560' }}>userId</span>]);  <span style={{ color: '#8899aa' }}>//  dependency</span>
         </p>
       </div>
     </div>
