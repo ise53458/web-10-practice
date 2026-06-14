@@ -10,11 +10,11 @@ import ServiceLayerDemo from './demos/ServiceLayerDemo';
 import ThreeStateDemo  from './demos/ThreeStateDemo';
 
 const DEMOS = [
-  { id: 1, label: '1 ?? useState',      component: UseStateDemo    },
-  { id: 2, label: '2 ?? useEffect',     component: UseEffectDemo   },
-  { id: 3, label: '3 ?? useContext',    component: UseContextDemo  },
-  { id: 4, label: '4 ?? Service Layer', component: ServiceLayerDemo },
-  { id: 5, label: '5 ?? Three States',  component: ThreeStateDemo  },
+  { id: 1, label: '1 - useState',      component: UseStateDemo    },
+  { id: 2, label: '2 - useEffect',     component: UseEffectDemo   },
+  { id: 3, label: '3 - useContext',    component: UseContextDemo  },
+  { id: 4, label: '4 - Service Layer', component: ServiceLayerDemo },
+  { id: 5, label: '5 -  Three States',  component: ThreeStateDemo  },
 ];
 
 export default function App() {

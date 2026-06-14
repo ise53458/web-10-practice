@@ -34,9 +34,9 @@ export default function Demo1_UseState() {
         <div className="counter-display">{count}</div>
 
         <div className="button-row">
-          <button onClick={decrement}>??? 1</button>
+          <button onClick={decrement}>- 1</button>
           <button onClick={increment}>+ 1</button>
-          <button onClick={double}>?? 2</button>
+          <button onClick={double}> x 2</button>
           <button className="secondary" onClick={reset}>Reset</button>
         </div>
       </div>
@@ -44,10 +44,10 @@ export default function Demo1_UseState() {
       {/* -- Inline explanation -- visible on slide/projector -- */}
       <div className="card">
         <p style={{ fontFamily: 'monospace', fontSize: '0.9rem', lineHeight: 1.7 }}>
-          <span style={{ color: '#8899aa' }}>// ??? Functional update -- always reads latest value</span><br />
+          <span style={{ color: '#8899aa' }}>// Functional update -- always reads latest value</span><br />
           <span style={{ color: '#53c0f0' }}>setCount</span>(prev =&gt; prev + 1)<br />
           <br />
-          <span style={{ color: '#8899aa' }}>// ??????  Closure over stale value -- can be wrong when batched</span><br />
+          <span style={{ color: '#8899aa' }}>// Closure over stale value -- can be wrong when batched</span><br />
           <span style={{ color: '#e94560' }}>setCount</span>(count + 1)
         </p>
       </div>
